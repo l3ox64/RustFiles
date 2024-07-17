@@ -13,6 +13,7 @@ This project is a simple web application built in Rust using the Axum framework,
    - Access the application at [http://localhost:3000](http://localhost:3000)
 
 3. **Usage:**
+   - Upload files inside the /files directory on the server via CLI
    - Navigate through directories by clicking on folder names.
    - Download files by clicking on their names or using the “Download” button.
    - Download entire folders by clicking the “Download Folder” button.
