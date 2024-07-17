@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin-left: 15%;
+            margin-right: 15%;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            color: #333;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background-color: #fff;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        li.directory button {
+            background-color: #2d2f2d; /* Green */
+            border: none;
+            color: white;
+            padding: 10px; /* Imposta il padding desiderato per il pulsante */
+            text-align: left; /* Allinea il testo a sinistra */
+            text-decoration: none;
+            display: flex; /* Utilizza flexbox per allineare correttamente l'icona e il testo */
+            align-items: center; /* Centra verticalmente il contenuto */
+            width: 100%; /* Larghezza al 100% del suo contenitore */
+            font-size: 16px;
+            margin: 4px 0; /* Margine sopra e sotto il pulsante */
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        li.directory button svg {
+            margin-right: 10px; /* Aggiunge spazio tra l'icona e il testo */
+            fill: white; /* Colore del riempimento dell'icona */
+            width: 20px; /* Dimensione dell'icona */
+            height: 20px;
+        }
+        li.file {
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Files and Directories</h1>
+    <ul>
+        {{file_list}}
+    </ul>
+</body>
+</html>
