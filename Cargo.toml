@@ -9,3 +9,4 @@ tokio = { version = "1.35.0", features = ["full"] }
 hyper = "0.14"
 tower = "0.4"
 zip = "0.5"
+thiserror = "1.0"
