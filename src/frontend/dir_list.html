@@ -7,93 +7,244 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin-left: 15%;
-            margin-right: 15%;
+            margin: 0 auto;
             padding: 20px;
+            max-width: 1200px; /* Limita la larghezza per migliorare la leggibilità */
             background-color: #f0f0f0;
-        }
-        h1 {
             color: #333;
+            transition: background-color 0.3s, color 0.3s;
         }
+
+        h1 {
+            text-align: center;
+            color: #000;
+        }
+
         ul {
             list-style-type: none;
             padding: 0;
         }
+
         li {
-            background-color: #fff;
-            margin: 5px 0;
-            padding: 10px;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: #fff;
+    margin: 10px 0; /* Increased margin for better spacing */
+    padding: 12px 20px; /* More padding for better content readability */
+    border-radius: 8px; /* Slightly larger border radius for a softer look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Deeper shadow for more depth */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transitions for hover effect */
+}
+
+li:hover {
+    transform: translateY(-5px); /* Slightly lifts the item on hover for interactive effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Darker shadow for hover effect */
+}
+
+
+        /* Navbar */
+        .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            background: linear-gradient(90deg, #4e54c8, #8f94fb);
+            padding: 15px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            flex-wrap: wrap; /* Make the navbar responsive */
         }
-        .custom-button {
+
+       /* Link della navbar */
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            margin-left: 1%;
+            margin-right: 1%;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            background-color: rgba(0, 0, 0, 0.236);
+        }
+
+        .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: scale(1.05);
+        }
+
+        /* Pulsante della navbar */
+        .nav-button {
+            background-color: #2d2f2d;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-left: 70%;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            text-decoration: none; /* Rimuove la sottolineatura */
+        }
+        .back-button {
+            background-color: #2d2f2d;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            text-decoration: none; /* Rimuove la sottolineatura */
+        }
+
+        
+
+        button {
             background-color: #2d2f2d;
             border: none;
             color: white;
             padding: 10px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
             font-size: 16px;
             margin-top: 10px;
             cursor: pointer;
             border-radius: 5px;
             transition: background-color 0.3s ease;
         }
-        li.directory button {
-            background-color: #2d2f2d;
-            border: none;
-            color: white;
-            padding: 10px;
-            text-align: left;
-            text-decoration: none;
+
+        button:hover {
+            background-color: #444;
+        }
+
+        .nav-button:hover {
+            background-color: #444;
+            transform: scale(1.05);
+        }
+
+        /* Modalità scura */
+        body.dark-mode {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode h1 {
+            color: #fff;
+        }
+
+        body.dark-mode li {
+            background-color: #1e1e1e;
+        }
+
+        /* Media Query per schermi più piccoli */
+        @media screen and (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .nav-link {
+                margin: 10px 0;
+            }
+
+            .toggle-container {
+                margin-top: 15px;
+            }
+        }
+
+        /* Icone tema */
+        .toggle-container {
             display: flex;
             align-items: center;
-            width: 100%;
-            font-size: 16px;
-            margin: 4px 0;
             cursor: pointer;
-            border-radius: 5px;
         }
-        li.directory button svg {
+
+        #theme-icon {
+            font-size: 24px;
             margin-right: 10px;
-            fill: white;
-            width: 20px;
-            height: 20px;
-        }
-        li.file {
-            color: #555;
-        }
-        a {
-            color: #2d2f2d;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .file-entry {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
         }
     </style>
 </head>
 <body>
-    <h1>Contents of {{directory}}</h1>
 
-    <div>
-    </div>
+    <nav class="navbar">
+        <div>
+            <a href="/" style="display: flex; align-items: center; font: bold 24px Arial; color: white; text-decoration: none;">
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcreazilla-store.fra1.digitaloceanspaces.com%2Ficons%2F3233062%2Fround-file-icon-md.png&f=1&nofb=1&ipt=6356ff22a1b9f83b805b5283b3ab02d6a781f903c50894cdcf07e86341122a67&ipo=images" 
+                     alt="RustFile Icon" 
+                     style="width: 30px; height: 30px; margin-right: 10px;">
+                RustFile
+            </a>
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; flex-grow: 1;">
+            <a href="/" class="nav-link" style="margin-left: 10px;">Home</a>
+            <a href="/directory" class="nav-link" style="margin-left: 10px;">Directory</a>
+            <a href="https://github.com/l3ox64/RustFiles" class="nav-link" style="margin-left: 10px;">AboutThis</a>
+        </div>
+        <div class="toggle-container" id="theme-toggle">
+            <span class="icon" id="theme-icon">🌙</span>
+            <div class="toggle"></div>
+        </div>
+    </nav>
+    
+    <h1 style="font: bold 24px Arial;">contents of {{directory}}</h1>
 
     <ul>
         {{file_list}}
     </ul>
-    <div class="text-center mt-4">
-        <a href="/" class="custom-button">Back to Root</a>
-    </div>
+
+    <button>
+        <a href="/" class="back-button">Back to Root</a>
+    </button>
+
+    <script>
+        function getCookie(name) {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) return parts.pop().split(';').shift();
+        }
+
+        function setCookie(name, value, days) {
+            const d = new Date();
+            d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+            const expires = "expires=" + d.toUTCString();
+            document.cookie = `${name}=${value}; ${expires}; path=/`;
+        }
+
+        // Applica il tema basato sul cookie
+        function applyTheme() {
+            const theme = getCookie("theme");
+            const body = document.body;
+            const toggle = document.querySelector(".toggle");
+            const themeIcon = document.getElementById("theme-icon");
+
+            if (theme === "dark") {
+                body.classList.add("dark-mode");
+                toggle.classList.add("dark");
+                themeIcon.textContent = "☀️";
+            } else {
+                body.classList.remove("dark-mode");
+                toggle.classList.remove("dark");
+                themeIcon.textContent = "🌙";
+            }
+        }
+
+        // Cambia tema
+        document.getElementById("theme-toggle").addEventListener("click", () => {
+            const isDarkMode = document.body.classList.toggle("dark-mode");
+            const toggle = document.querySelector(".toggle");
+            const themeIcon = document.getElementById("theme-icon");
+
+            if (isDarkMode) {
+                toggle.classList.add("dark");
+                themeIcon.textContent = "☀️";
+                setCookie("theme", "dark", 7);
+            } else {
+                toggle.classList.remove("dark");
+                themeIcon.textContent = "🌙";
+                setCookie("theme", "light", 7);
+            }
+        });
+
+        // Applica il tema al caricamento
+        applyTheme();
+    </script>
 
 </body>
 </html>
