@@ -1,0 +1,77 @@
+Mar 19 12:02:00 Proxmox systemd[1]: Starting Daily apt download activities...
+Mar 19 12:02:00 Proxmox systemd[1]: apt-daily.service: Succeeded.
+Mar 19 12:02:00 Proxmox systemd[1]: Finished Daily apt download activities.
+Mar 19 12:17:01 Proxmox CRON[3202457]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Mar 19 12:17:01 Proxmox CRON[3202458]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Mar 19 12:17:01 Proxmox CRON[3202457]: pam_unix(cron:session): session closed for user root
+Mar 19 12:32:00 Proxmox smartd[2378]: Device: /dev/sdc [SAT], SMART Usage Attribute: 194 Temperature_Celsius changed from 19 to 20
+Mar 19 13:02:00 Proxmox smartd[2378]: Device: /dev/sdb [SAT], SMART Prefailure Attribute: 1 Raw_Read_Error_Rate changed from 79 to 80
+Mar 19 13:02:00 Proxmox smartd[2378]: Device: /dev/sdb [SAT], SMART Usage Attribute: 195 Hardware_ECC_Recovered changed from 79 to 80
+Mar 19 13:17:01 Proxmox CRON[3316937]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Mar 19 13:17:01 Proxmox CRON[3316938]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Mar 19 13:17:01 Proxmox CRON[3316937]: pam_unix(cron:session): session closed for user root
+Mar 19 14:17:01 Proxmox CRON[3437003]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Mar 19 14:17:01 Proxmox CRON[3437004]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Mar 19 14:17:01 Proxmox CRON[3437003]: pam_unix(cron:session): session closed for user root
+Mar 19 14:32:00 Proxmox smartd[2378]: Device: /dev/sdc [SAT], SMART Usage Attribute: 194 Temperature_Celsius changed from 20 to 19
+Mar 19 15:02:00 Proxmox smartd[2378]: Device: /dev/sdc [SAT], SMART Usage Attribute: 194 Temperature_Celsius changed from 19 to 20
+Mar 19 15:17:01 Proxmox CRON[3572974]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Mar 19 15:17:01 Proxmox CRON[3572975]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Mar 19 15:17:01 Proxmox CRON[3572974]: pam_unix(cron:session): session closed for user root
+Mar 19 15:32:00 Proxmox smartd[2378]: Device: /dev/sdb [SAT], SMART Prefailure Attribute: 1 Raw_Read_Error_Rate changed from 80 to 81
+Mar 19 15:32:00 Proxmox smartd[2378]: Device: /dev/sdb [SAT], SMART Usage Attribute: 195 Hardware_ECC_Recovered changed from 80 to 81
+Mar 19 16:02:01 Proxmox smartd[2378]: Device: /dev/sdc [SAT], SMART Usage Attribute: 194 Temperature_Celsius changed from 20 to 21
+Mar 19 16:17:01 Proxmox CRON[3694721]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Mar 19 16:17:01 Proxmox CRON[3694722]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Mar 19 16:17:01 Proxmox CRON[3694721]: pam_unix(cron:session): session closed for user root
+Mar 19 16:32:01 Proxmox smartd[2378]: Device: /dev/sdc [SAT], SMART Usage Attribute: 194 Temperature_Celsius changed from 21 to 19
+Mar 19 17:02:00 Proxmox smartd[2378]: Device: /dev/sdc [SAT], SMART Usage Attribute: 194 Temperature_Celsius changed from 19 to 20
+Mar 19 17:17:01 Proxmox CRON[3812924]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Mar 19 17:17:01 Proxmox CRON[3812925]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Mar 19 17:17:01 Proxmox CRON[3812924]: pam_unix(cron:session): session closed for user root
+Mar 19 17:32:01 Proxmox smartd[2378]: Device: /dev/sdc [SAT], SMART Usage Attribute: 194 Temperature_Celsius changed from 20 to 19
+Mar 19 18:17:01 Proxmox CRON[3933025]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Mar 19 18:17:01 Proxmox CRON[3933026]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Mar 19 18:17:01 Proxmox CRON[3933025]: pam_unix(cron:session): session closed for user root
+Mar 19 18:32:01 Proxmox smartd[2378]: Device: /dev/sdc [SAT], SMART Usage Attribute: 194 Temperature_Celsius changed from 19 to 20
+Mar 19 19:02:01 Proxmox smartd[2378]: Device: /dev/sdb [SAT], SMART Prefailure Attribute: 1 Raw_Read_Error_Rate changed from 81 to 82
+Mar 19 19:02:01 Proxmox smartd[2378]: Device: /dev/sdb [SAT], SMART Usage Attribute: 195 Hardware_ECC_Recovered changed from 81 to 82
+Mar 19 19:02:01 Proxmox smartd[2378]: Device: /dev/sdc [SAT], SMART Usage Attribute: 194 Temperature_Celsius changed from 20 to 19
+Mar 19 19:17:01 Proxmox CRON[4043076]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Mar 19 19:17:01 Proxmox CRON[4043077]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Mar 19 19:17:01 Proxmox CRON[4043076]: pam_unix(cron:session): session closed for user root
+Mar 19 20:17:01 Proxmox CRON[4189615]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Mar 19 20:17:01 Proxmox CRON[4189616]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Mar 19 20:17:01 Proxmox CRON[4189615]: pam_unix(cron:session): session closed for user root
+Mar 19 20:32:00 Proxmox smartd[2378]: Device: /dev/sdc [SAT], SMART Usage Attribute: 194 Temperature_Celsius changed from 19 to 20
+Mar 19 21:02:00 Proxmox smartd[2378]: Device: /dev/sdb [SAT], SMART Usage Attribute: 190 Airflow_Temperature_Cel changed from 73 to 74
+Mar 19 21:02:00 Proxmox smartd[2378]: Device: /dev/sdb [SAT], SMART Usage Attribute: 194 Temperature_Celsius changed from 27 to 26
+Mar 19 21:17:01 Proxmox CRON[103180]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Mar 19 21:17:01 Proxmox CRON[103181]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Mar 19 21:17:01 Proxmox CRON[103180]: pam_unix(cron:session): session closed for user root
+Mar 19 21:19:18 Proxmox systemd[1]: Starting Daily apt download activities...
+Mar 19 21:19:19 Proxmox systemd[1]: apt-daily.service: Succeeded.
+Mar 19 21:19:19 Proxmox systemd[1]: Finished Daily apt download activities.
+Mar 19 21:32:00 Proxmox smartd[2378]: Device: /dev/sdc [SAT], SMART Usage Attribute: 194 Temperature_Celsius changed from 20 to 19
+-- Reboot --
+Mar 20 08:37:58 Proxmox kernel: Linux version 5.15.30-2-pve (build@proxmox) (gcc (Debian 10.2.1-6) 10.2.1 20210110, GNU ld (GNU Binutils for Debian) 2.35.2) #1 SMP PVE 5.15.30-3 (Fri, 22 Apr 2022 18:08:27 +0200) ()
+Mar 20 08:37:58 Proxmox kernel: Command line: BOOT_IMAGE=/boot/vmlinuz-5.15.30-2-pve root=/dev/mapper/pve-root ro quiet
+Mar 20 08:37:58 Proxmox kernel: KERNEL supported cpus:
+Mar 20 08:37:58 Proxmox kernel:   Intel GenuineIntel
+Mar 20 08:37:58 Proxmox kernel:   AMD AuthenticAMD
+Mar 20 08:37:58 Proxmox kernel:   Hygon HygonGenuine
+Mar 20 08:37:58 Proxmox kernel:   Centaur CentaurHauls
+Mar 20 08:37:58 Proxmox kernel:   zhaoxin   Shanghai  
+Mar 20 08:37:58 Proxmox kernel: x86/fpu: Supporting XSAVE feature 0x001: 'x87 floating point registers'
+Mar 20 08:37:58 Proxmox kernel: x86/fpu: Supporting XSAVE feature 0x002: 'SSE registers'
+Mar 20 08:37:58 Proxmox kernel: x86/fpu: Supporting XSAVE feature 0x004: 'AVX registers'
+Mar 20 08:37:58 Proxmox kernel: x86/fpu: Supporting XSAVE feature 0x200: 'Protection Keys User registers'
+Mar 20 08:37:58 Proxmox kernel: x86/fpu: xstate_offset[2]:  576, xstate_sizes[2]:  256
+Mar 20 08:37:58 Proxmox kernel: x86/fpu: xstate_offset[9]:  832, xstate_sizes[9]:    8
+Mar 20 08:37:58 Proxmox kernel: x86/fpu: Enabled xstate features 0x207, context size is 840 bytes, using 'compacted' format.
+Mar 20 08:37:58 Proxmox kernel: signal: max sigframe size: 3632
+Mar 20 08:37:58 Proxmox kernel: BIOS-provided physical RAM map:
+Mar 20 08:37:58 Proxmox kernel: BIOS-e820: [mem 0x0000000000000000-0x000000000009dfff] usable
+Mar 20 08:37:58 Proxmox kernel: BIOS-e820: [mem 0x000000000009e000-0x000000000009efff] reserved
+Mar 20 08:37:58 Proxmox kernel: BIOS-e820: [mem 0x000000000009f000-0x000000000009ffff] usable
+Mar 20 08:37:58 Proxmox kernel: BIOS-e820: [mem 0x00000000000a0000-0x00000000000fffff] reserved

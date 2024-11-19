@@ -32,10 +32,9 @@ impl fmt::Display for ServerError {
     }
 }
 
-
-
 pub async fn dir_list(Path(path): Path<String>) -> Result<Html<String>, (StatusCode, String)> {
     let directory = format!("files/{}", path);
+    
     let file_list_html = file_list(&directory)
         .map_err(|e| (StatusCode::INTERNAL_SERVER_ERROR, e.to_string()))?;
 
@@ -48,8 +47,6 @@ pub async fn dir_list(Path(path): Path<String>) -> Result<Html<String>, (StatusC
 
     Ok(Html(html_content))
 }
-
-
 
 pub fn file_list(directory: &str) -> Result<String, ServerError> {
     let paths = fs::read_dir(directory)
@@ -95,11 +92,9 @@ pub fn file_list(directory: &str) -> Result<String, ServerError> {
     Ok(file_list_html)
 }
 
-
-
 pub async fn download_file(Path(path): Path<String>) -> impl IntoResponse {
     let file_path = format!("files/{}", path);
-    
+
     match File::open(&file_path) {
         Ok(mut file) => {
             let mut contents = Vec::new();
